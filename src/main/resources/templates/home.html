@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
-</body>
-</html>
+<header th:include="partials :: header(title = 'Home')"></header>
+
+<nav th:include="partials :: navbar"></nav>
+
+
