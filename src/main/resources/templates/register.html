@@ -9,4 +9,51 @@
 <body>
 <nav th:include="partials :: navbar"></nav>
 
+<h1 class="text-center">Create an account</h1>
+<div class="d-flex justify-content-center align-items-center mt-3">
+    <div class="card w-75 mt-3">
+        <div class="card-body formCard rounded-3">
+            <div class="container">
+                <div class="row">
+                    <form th:action="@{/register}" method="POST" th:object="${user}">
+                        <div class="container">
+                            <div class="row">
+                                <div class="username col col-12 col-sm-12 col-md-6 col-lg-6">
+                                    <label for="username">Username</label>
+                                    <input id="username" th:field="*{username}"/>
+                                </div>
+                                <div class="email col mt-lg-3 mt-sm-0">
+                                    <div class="email" id="consumer">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input id="email" th:field="*{email}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row g-3">
+                                <div class="col-md-6 password">
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input id="password" type="password" th:field="*{password}"/>
+                                    </div>
+                                </div>
+                                <div class="signup col mt-lg-3 mt-sm-0">
+                                    <div class="signup" id="signup">
+                                        <div class="form-group">
+                                            <input value="Sign me up!" type="submit"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
 </body>
